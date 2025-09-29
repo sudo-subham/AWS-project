@@ -39,31 +39,32 @@ info-collector/
 ### 1. Clone the repository
 
 1. Clone the repository
-''''
+
+```
 git clone https://github.com/your-username/info-collector.git
 cd info-collector
-''''
+```
 2. Set up a virtual environment
-
+```
 python3 -m venv venv
 source venv/bin/activate  # For Windows: venv\Scripts\activate
-
+```
 3. Install dependencies
-
+```
 pip install Flask mysql-connector-python
-
+```
 
 Configuration
 
 Update your DB config in app.py:
-
+```
 db = mysql.connector.connect(
     host="your-rds-endpoint",
     user="your-db-user",
     password="your-db-password",
     database="your-db-name"
 )
-
+```
 Start the Flask development server:
 
 python app.py
@@ -79,7 +80,7 @@ screenshot
 Database Schema
 
 You’ll need a table like this in your RDS MySQL instance:
-
+```
 CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     first_name VARCHAR(100),
@@ -88,7 +89,7 @@ CREATE TABLE users (
     phone VARCHAR(20),
     submitted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-
+```
 
 
 📦 Deployment on AWS (Summary)
