@@ -39,10 +39,10 @@ info-collector/
 ### 1. Clone the repository
 
 1. Clone the repository
-
+''''
 git clone https://github.com/your-username/info-collector.git
 cd info-collector
-
+''''
 2. Set up a virtual environment
 
 python3 -m venv venv
